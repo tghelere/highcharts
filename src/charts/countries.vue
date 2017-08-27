@@ -1,6 +1,7 @@
 <script>
 import {mapState} from 'vuex'
 import _ from 'lodash'
+import Highcharts from 'highcharts'
 
 export default {
     computed: mapState({
@@ -35,13 +36,41 @@ export default {
         // Note: this method should only be called when the data source is ready
         setup(obj){
             
+            const {categories, values} = obj
+
+             Highcharts.chart('container-for-charts', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Countries'
+                },
+                subtitle: {
+                    text: 'Source: github.com/tghelere'
+                },
+                xAxis: {
+                    categories: categories,
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Countries'
+                    }
+                },            
+                series: [{
+                    name: 'Quantity',
+                    data: values
+
+                }]
+            });
         },
     },
 }
 </script>
 
 <template>
-    <div>
+    <div id="container-for-charts">
         Countries chart
     </div>
 </template>
