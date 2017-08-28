@@ -1,19 +1,10 @@
 <script>
-import {mapState} from 'vuex'
+import base from './base.vue'
 import _ from 'lodash'
 import Highcharts from 'highcharts'
 
 export default {
-    computed: mapState({
-        list: state => state.list
-    }),
-
-    watch: {
-        list(){
-            this.dataSource()
-        }
-    },
-
+    extends: base,
     methods: {
         // Used to read the list and calculate the chart data source
         dataSource(){
@@ -38,7 +29,7 @@ export default {
             
             const {categories, values} = obj
 
-             Highcharts.chart('container-for-charts', {
+             Highcharts.chart('container-for-countries', {
                 chart: {
                     type: 'column'
                 },
@@ -70,7 +61,5 @@ export default {
 </script>
 
 <template>
-    <div id="container-for-charts">
-        Countries chart
-    </div>
+    <div id="container-for-countries"></div>
 </template>

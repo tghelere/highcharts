@@ -26,9 +26,9 @@
       <div class="col-md-6">
         <countries></countries>
       </div>
-      <!-- <div class="col-md-6">
+      <div class="col-md-6">
         <languages></languages>
-      </div> -->
+      </div>
     </div>
 
   </div>
