@@ -15,13 +15,18 @@ export default {
                 .orderBy(['value'], ['desc'])
                 .value()
 
-            const subset = base.slice(0, 10)
+            const finalData = base.slice(0, 10)
 
-            this.setup({ subset })
+            if (this.chart === null) {
+                this.chart = this.setup({ finalData })                
+            }else{
+                this.chart.series[0].setData(finalData)
+            }
+            
         },
         setup(obj){
-            const { subset } = obj
-            Highcharts.chart('container-for-languages', {
+            const { finalData } = obj
+            return Highcharts.chart('container-for-languages', {
                 chart: {
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
@@ -50,7 +55,7 @@ export default {
                 series: [{
                     name: 'Percentage',
                     colorByPoint: true,
-                    data: subset
+                    data: finalData
                 }]
             });
         }

@@ -18,9 +18,14 @@ export default {
 
             const categories = base.map(item => item.key)
             
-            const values = base.map(item => item.value)            
+            const values = base.map(item => item.value)  
             
-            this.setup({categories, values})
+            if (this.chart === null) {
+                this.chart = this.setup({ categories, values })
+            }else{
+                this.chart.series[0].setData(values)
+            }
+                        
         },
 
         // Used to mount the chart and display it on the screen
@@ -29,7 +34,7 @@ export default {
             
             const {categories, values} = obj
 
-             Highcharts.chart('container-for-countries', {
+             return Highcharts.chart('container-for-countries', {
                 chart: {
                     type: 'column'
                 },

@@ -24,5 +24,11 @@
                 this.dataSource()
             },
         },
+
+        data(){
+            return{
+                chart: null
+            }
+        }
     }
 </script>
