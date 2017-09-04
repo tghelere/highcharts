@@ -11,6 +11,9 @@ export default new Vuex.Store({
     mutations: {
         SET_LIST(state, obj) {
             state.list = obj
+        },
+        SET_FILTER(state, obj) {
+            state.filter = obj
         }
     }
 })

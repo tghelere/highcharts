@@ -8,7 +8,7 @@ export default {
     methods: {
         // Used to read the list and calculate the chart data source
         dataSource(){
-            const countries = this.list.map(item => item.country)
+            const countries = this.localList.map(item => item.country)
 
             const base = _(countries)
                 .countBy()

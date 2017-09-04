@@ -7,7 +7,7 @@ export default {
 
     methods: {
         dataSource(){
-            const languages = this.list.map(item => item.language)
+            const languages = this.localList.map(item => item.language)
 
             const base = _(languages)
                 .countBy()

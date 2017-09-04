@@ -19,9 +19,9 @@
 
 <template>
   <div class="container">
-    <!-- <div class="well">
+    <div class="well">
       <filters></filters>
-    </div> -->
+    </div>
     <div class="row">
       <div class="col-md-6">
         <countries></countries>
