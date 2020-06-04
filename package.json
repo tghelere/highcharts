@@ -15,8 +15,8 @@
     "highcharts": "^7.0.1",
     "lodash": "^4.17.13",
     "vue": "^2.3.3",
-    "vuex": "^3.3.0",
-    "snyk": "^1.320.2"
+    "vuex": "^3.4.0",
+    "snyk": "^1.319.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
