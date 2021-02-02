@@ -16,7 +16,7 @@
     "lodash": "^4.17.20",
     "vue": "^2.6.12",
     "vuex": "^3.6.0",
-    "snyk": "^1.425.4"
+    "snyk": "^1.437.3"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
